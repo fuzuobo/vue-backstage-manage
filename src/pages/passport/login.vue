@@ -94,6 +94,7 @@
               this.request('AdminLogin', this.formLogin).then((res) => {
                 if (res.status) {
                   let data = res.data;
+                  console.log(data)
                   let userData = {userInfo: data.userInfo, token: data.token};
                   this.userLogin(userData);
                   //store 菜单
